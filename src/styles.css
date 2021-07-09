@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+html, body{
   background-color: #edf1f4;
+  font-family: 'Muli';
+
 }

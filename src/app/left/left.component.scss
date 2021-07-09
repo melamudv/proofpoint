@@ -4,7 +4,7 @@
   .input-field{
     border:none;
     border-bottom: 2px solid #66aee4;
-    font-family: Arial;
+    font-family: Muli;
     font-size: 18px;
     height: auto;
     width:100%;
@@ -12,6 +12,7 @@
     color:#66aee4;
     &::placeholder{
       color:#66aee4;
+      font-family: Muli;
     }
     &:focus{
       outline: none
@@ -19,7 +20,7 @@
   }
   .user{
     padding:15px 5px;
-    font-family: Arial;
+    font-family: Muli;
     font-size: 18px;
     color: #85bfea;
     &:hover
