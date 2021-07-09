@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       .subscribe((users: IUsers[]) => this.users = users);
   }
 
-  onSubmitted($event: IUsers) {
+  onSubmitted($event: IUsers): void {
     this.pickedUser = $event;
   }
 
@@ -29,20 +29,22 @@ export class AppComponent implements OnInit {
   }
 
   onSave($event: IUsers): void {
+    let existUser = false;
     this.users.map((user: IUsers) => {
       if(user._id === $event._id){
+        existUser = true;
         user.first_name = $event.first_name;
         user.last_name = $event.last_name;
         user.phone_number = $event.phone_number;
         return user;
       }
-      else {
-        return user;
-      }
     });
+    if(!existUser){
+      this.onAdd($event);
+    }
   }
 
-  onAdd($event: IUsers) {
+  onAdd($event: IUsers): void {
     this.users.push($event);
   }
 }

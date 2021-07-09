@@ -39,7 +39,7 @@ export class RightComponent implements OnInit, OnChanges  {
     let sendData = {
       _id: ((Math.floor(100000 + Math.random() * 900000))).toString(),
       first_name: splited[0],
-      last_name: splited[1],
+      last_name: splited[1] ? splited[1] : '',
       phone_number: this.form.get('telephone').value,
     };
     this.add.emit(sendData);
@@ -50,11 +50,12 @@ export class RightComponent implements OnInit, OnChanges  {
     let fullName = this.form.get('full_name').value;
     let splited = fullName.split(" ");
     let sendData = {
-      _id: this.pickedUser._id,
+      _id: this.pickedUser?._id ? this.pickedUser._id : ((Math.floor(100000 + Math.random() * 900000))).toString(),
       first_name: splited[0],
-      last_name: splited[1],
+      last_name: splited[1] ? splited[1] : '',
       phone_number: this.form.get('telephone').value,
     };
+    console.log("sendData", sendData);
     this.save.emit(sendData);
     this.clear();
   }
