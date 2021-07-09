@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  padding-left:5vh;
+  padding-right:5vh;
+  .left{
+    height: 80vh;
+    width:20vw;
+    background-color: #fff;
+    border:1px solid #e1e9eb;
+    display: flex;
+    margin-right:3vw;
+    margin-top:60px;
+    margin-bottom:10px;
+    border-radius: 3px;
+    &-component{
+      width: 100%;
+    }
+  }
+  .right{
+    width:60vw;
+    display: flex;
+  }
+}
+
+

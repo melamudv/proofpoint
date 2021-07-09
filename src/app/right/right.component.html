@@ -1,0 +1,27 @@
+<div class="right">
+  <form [formGroup]="form">
+    <div class="top-line">
+      <button class="button-regular" (click)="addUser()" [disabled]="!form.valid">ADD USER</button>
+    </div>
+    <div class="middle-line">
+      <div class="wrapper">
+        <div class="title">DETAILS</div>
+        <div class="separator"></div>
+        <div class="input-wrapper">
+          <label for="full-name">Full Name: </label>
+          <input id="full-name" type="text" formControlName="full_name">
+        </div>
+       <div class="input-wrapper">
+         <label for="telephone">Phone Number: </label>
+         <input id="telephone" type="text" formControlName="telephone">
+       </div>
+
+      </div>
+    </div>
+
+    <div class="bottom-line">
+      <button class="button-regular" (click)="onDelete()" [disabled]="!form.valid">DELETE</button>
+      <button class="button-regular-blue" (click)="onSave()" [disabled]="!form.valid">SAVE</button>
+    </div>
+  </form>
+</div>

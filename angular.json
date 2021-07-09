@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "proofpoint"
+  "defaultProject": "proofpoint",
+  "cli": {
+    "analytics": false
+  }
 }

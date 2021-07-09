@@ -1,0 +1,32 @@
+.wrapper{
+  padding:10px;
+
+  .input-field{
+    border:none;
+    border-bottom: 2px solid #66aee4;
+    font-family: Arial;
+    font-size: 18px;
+    height: auto;
+    width:100%;
+    margin-bottom: 10px;
+    color:#66aee4;
+    &::placeholder{
+      color:#66aee4;
+    }
+    &:focus{
+      outline: none
+    }
+  }
+  .user{
+    padding:15px 5px;
+    font-family: Arial;
+    font-size: 18px;
+    color: #85bfea;
+    &:hover
+    {
+      background-color: #ddecf6;
+      cursor: pointer;
+      color: #85bfea;
+    }
+  }
+}

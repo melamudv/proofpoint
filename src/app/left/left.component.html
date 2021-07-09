@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <input [(ngModel)]="query" class="input-field" placeholder="Search...">
+  <i class="search"></i>
+  <div *ngFor="let user of users | sort | search:'first_name,last_name':query">
+    <div class="user" (click)="checkUser(user)">{{user.first_name}} {{user.last_name}}</div>
+  </div>
+</div>
+
