@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from "@angular/core";
 import {IUsers} from './interfaces';
 
 @Pipe({
-  name: "sort"
+  name: "sort",
+  pure: false
 })
 export class ArraySortPipe  implements PipeTransform {
   transform(array: Array<IUsers>, args: string): Array<IUsers> {
