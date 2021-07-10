@@ -1,10 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LeftComponent } from './left.component';
+import {DataService} from '../core/data.service';
 
 describe('LeftComponent', () => {
   let component: LeftComponent;
   let fixture: ComponentFixture<LeftComponent>;
+  let service: DataService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
